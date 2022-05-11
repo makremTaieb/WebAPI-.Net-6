@@ -1,0 +1,226 @@
+{
+	"info": {
+		"_postman_id": "257a6ae9-915a-40bd-aeef-02ae6ad19f86",
+		"name": "Formation.NetCore6",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "getAllRelations",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7113/api/Relations/getAll",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7113",
+					"path": [
+						"api",
+						"Relations",
+						"getAll"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getRelationFromUrl",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7113/api/Relations/GetRelationByIDFromUrl/000012121",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7113",
+					"path": [
+						"api",
+						"Relations",
+						"GetRelationByIDFromUrl",
+						"000012121"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetByIDFromParam",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7113/api/Relations/GetByIDFromParam?idD=000012121",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7113",
+					"path": [
+						"api",
+						"Relations",
+						"GetByIDFromParam"
+					],
+					"query": [
+						{
+							"key": "idD",
+							"value": "000012121"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetRelationFromUrlWithTwoAttributesInUrl",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7113/api/Relations/GetRelationFromUrlWithTwoAttributesInUrl/000012121/AZIZA",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7113",
+					"path": [
+						"api",
+						"Relations",
+						"GetRelationFromUrlWithTwoAttributesInUrl",
+						"000012121",
+						"AZIZA"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetRelationFromUrlWithTwoParams",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7113/api/Relations/GetRelationFromUrlWithTwoParams?idD=000012121&name=AZIZA",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7113",
+					"path": [
+						"api",
+						"Relations",
+						"GetRelationFromUrlWithTwoParams"
+					],
+					"query": [
+						{
+							"key": "idD",
+							"value": "000012121"
+						},
+						{
+							"key": "name",
+							"value": "AZIZA"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Relation",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"cUserId\": \"4592Y\",\r\n     \"name\": \"ARA\",\r\n     \"segment\": 1,\r\n     \"digitalId\": \"000012349\",\r\n     \"scope\": \"F\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7113/api/Relations/AddRelation",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7113",
+					"path": [
+						"api",
+						"Relations",
+						"AddRelation"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update REaltion",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"cUserId\": \"4592U\",\r\n        \"name\": \"ADIN3\",\r\n        \"segment\": 1,\r\n        \"digitalId\": \"000012349\",\r\n        \"scope\": \"F\",\r\n        \"uUserId\": \"Kimo\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7113/api/Relations/UpdateRelation?idDigital=000012349",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7113",
+					"path": [
+						"api",
+						"Relations",
+						"UpdateRelation"
+					],
+					"query": [
+						{
+							"key": "idDigital",
+							"value": "000012349"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete REaltion",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7113/api/Relations/DeleteRelation?idDigital=000012348",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7113",
+					"path": [
+						"api",
+						"Relations",
+						"DeleteRelation"
+					],
+					"query": [
+						{
+							"key": "idDigital",
+							"value": "000012348"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
